@@ -36,6 +36,9 @@ public class PlayerLife : MonoBehaviour
         // Changing body type upon deat - AKA stop allowing movement
         rb.bodyType = RigidbodyType2D.Static;
         ani.SetTrigger("death");
+
+        // Resetting pinapples collected on this level death 
+        PlayerPrefs.SetInt("Pineapples", 0);
     }
 
     private void RestartLevel()
